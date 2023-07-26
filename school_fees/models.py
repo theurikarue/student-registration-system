@@ -1,8 +1,8 @@
 from django.db import models
+from student_register.models import Student
 
-# Create your models here.
 class Finance(models.Model):
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     Total_fee = models.IntegerField()
-    Fee_balance = models.IntegerField()
     Fee_paid = models.IntegerField()
-    
+    Fee_balance = models.IntegerField() 
