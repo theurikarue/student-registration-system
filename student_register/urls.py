@@ -4,6 +4,6 @@ from .import views
 
 urlpatterns = [
     path('', views.student_form), 
-    path('list/',views.student_list)
+    path('list/',views.student_form)
 
     ]

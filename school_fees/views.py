@@ -8,6 +8,9 @@ from django.shortcuts import render
 def Fee_list(request):
     return render(request ,"school_fees/")
 
+def student_update(request):
+    
+    return render(request ,"school_fees")
 
 def Fee_form(request):
     return render (request, "school_fees/")

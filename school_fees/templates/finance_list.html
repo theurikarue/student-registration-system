@@ -1,0 +1,23 @@
+<!-- finance_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Financial Records</h1>
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Total Fee</th>
+      <th>Fee Paid</th>
+      <th>Fee Balance</th>
+    </tr>
+    {% for finance in finances %}
+    <tr>
+      <td>{{ finance.student }}</td>
+      <td>{{ finance.Total_fee }}</td>
+      <td>{{ finance.Fee_paid }}</td>
+      <td>{{ finance.Fee_balance }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="{% url 'add_finance' %}">Add Finance Record</a>
+{% endblock %}

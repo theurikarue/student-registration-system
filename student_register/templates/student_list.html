@@ -1,0 +1,25 @@
+<!-- student_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Student Records</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Reg No</th>
+      <th>Mobile No</th>
+      <th>Email</th>
+      <th>Intake Year</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+      <td>{{ student.Name }}</td>
+      <td>{{ student.Reg_no }}</td>
+      <td>{{ student.Mobile_no }}</td>
+      <td>{{ student.Student_email }}</td>
+      <td>{{ student.Intake_year }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="{% url 'add_student' %}">Add Student</a>
+{% endblock %}
